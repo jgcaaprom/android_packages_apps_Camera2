@@ -35,3 +35,8 @@ LOCAL_JNI_SHARED_LIBRARIES := libjni_tinyplanet libjni_jpegutil
 include $(BUILD_PACKAGE)
 
 include $(call all-makefiles-under, $(LOCAL_PATH))
+
+LOCAL_CC := $$(TARGET_TOOLCHAIN_ROOT)/../arm-linux-androideabi-4.8/bin/arm-linux-androideabi-gcc$$(HOST_EXECUTABLE_SUFFIX) 
+LOCAL_CXX := $$(TARGET_TOOLCHAIN_ROOT)/../arm-linux-androideabi-4.8/bin/arm-linux-androideabi-g++$$(HOST_EXECUTABLE_SUFFIX)
+
+$(combo_2nd_arch_prefix)TARGET_NDK_GCC_VERSION := 4.8
